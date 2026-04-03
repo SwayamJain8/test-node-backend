@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 // Basic health check route
 app.get('/health', (req, res) => {
@@ -9,7 +9,7 @@ app.get('/health', (req, res) => {
 
 // Simple ping-pong route
 app.get('/ping', (req, res) => {
-    res.status(200).send('pong');
+    res.status(200).json({ message: 'pong' });
 });
 
 // Detailed status route
